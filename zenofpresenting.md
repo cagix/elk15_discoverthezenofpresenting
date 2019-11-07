@@ -40,19 +40,19 @@ Am Ende des Workshops haben Sie einen guten Überblick über:
 Wozu dienen mir die Folien
 --------------------------
 
-1.   Vortrag
+1.  Vortrag
     -   Roter Faden in VL für Vortragenden, Visualisierung für Studis
 
-    \smallskip
+\smallskip
 
-2.   Handout
+2.  Handout
     -   Angereichert mit weiteren Beispielen und Informationen
     -   Komprimierteres Layout (Seitensparen beim Ausdrucken)
     -   Auf E-Readern und Tablets besser nutzbares Format
 
-    \smallskip
+\smallskip
 
-3.   ILIAS
+3.  ILIAS
     -   Lernmodul (VL als HTML)
 
 
@@ -61,7 +61,7 @@ Technischer Blick
 
 -   **Eine** Quelle, um daraus die gewünschten Formate zu generieren
 
-    \smallskip
+\smallskip
 
 -   **Versionierung**: Was habe ich wann warum geändert/ergänzt/rausgenommen/...?!
     -   Was habe ich den Studis in welchem Semester gegeben?
@@ -88,11 +88,11 @@ Womit erstelle ich die Folien
     -   Kein vernünftiger Handout-Export
     -   Kein Export in moderne Formate
 
-    \smallskip
+\smallskip
 
 -   Zwischenzeitlich: LaTeX und Beamer-Klasse
 
-    \smallskip
+\smallskip
 
 -   Heute: Markdown für Standarddinge, Rest mit LaTeX-Makros
     -   Pandoc: Export in Zielformate
@@ -232,11 +232,15 @@ Pandoc: General Markup Converter
 > Pandoc is a Haskell library for **converting from one markup format to
 > another**, and a command-line tool that uses this library.
 
+\bigskip
+
 > It can read **markdown** and ... and Word docx; and
 > it can write plain text, markdown, ... ,
 > **HTML 5**, **LaTeX** (including **beamer slide shows**), ..., **EPUB**
 > (v2 or v3), ..., reveal.js or S5 HTML slide shows. It can also produce
 > **PDF output** on systems where LaTeX is installed.
+
+\bigskip
 
 > Pandoc's **enhanced version of markdown** includes syntax for footnotes,
 > tables, flexible ordered lists, ...
@@ -442,5 +446,3 @@ Literatur zum Weiterlesen
     *   Opensourcepress: [AsciiDoc vs. Markdown](http://www.opensourcepress.de/de/blog/2013/05/asciidoc_markdown.php)
 
     *   [HTML5-Präsentationen mit AsciiDoc](http://mojavelinux.github.com/decks/)
-
-

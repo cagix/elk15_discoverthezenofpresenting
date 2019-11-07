@@ -1,0 +1,111 @@
+%%%
+%%% Carsten Gips, FH Bielefeld
+%%% 06.09.2015
+%%%
+%%% Gemeinsame Definitionen fuer LaTeX-Exporte: Slides/Beamer, Uebungsblatt, Klausur, ...)
+%%%
+
+%------------------------------------- Pakete ---------------------
+\usepackage[babel]{csquotes}
+\usepackage{xspace}
+%------------------------------------- Pakete ---------------------
+
+
+%------------------------------------- Farben ---------------------
+\usepackage{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{dkred}{rgb}{0.6,0,0}
+\definecolor{dkblue}{rgb}{0,0,0.6}
+\definecolor{gray}{rgb}{0.7,0.7,0.7}
+\definecolor{listinggray}{gray}{0.92}
+\definecolor{midnightblue}{rgb}{0.2,0.2,0.7}
+%------------------------------------- Farben ---------------------
+
+
+%------------------------------------- Beamer Settings ----------------
+\usetheme{default}     % auch ganz nett -- ohne alles
+%\usetheme{Singapore}   % Alternative mit Navigation oben
+%\usetheme{Goettingen}  % wird mit den folgenden Einstellungen erreicht
+\useinnertheme{default}
+\usecolortheme{rose}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{bibliography item}[book]
+
+%\usefonttheme[only large]{structurebold}
+%\setbeamerfont{block title}{size=\small}
+
+%\setbeamerfont{subtitle}{size=\Large}%,series=\bfseries}
+%\setbeamerfont{title}{size=\Large,shape=\scshape}
+
+% Default: 128mm x 96mm => 120mm Textbreite
+\setbeamersize{text margin left=4mm}
+\setbeamersize{text margin right=4mm}
+%\setbeamersize{sidebar width left==0mm}
+%\setbeamersize{sidebar width right==0mm}
+
+% colors: white text on 90% black background
+%\setbeamercolor{normal text}{fg=white,bg=black!90}
+\setbeamercolor{normal text}{fg=black!70,bg=white}
+
+% light blue as a highlight color
+\setbeamercolor*{structure}{fg=midnightblue!90}
+%\setbeamercolor*{structure}{fg=blue!33!white}
+%\setbeamercolor*{structure}{fg=blue!70!white}
+%\setbeamercolor{alerted text}{use=structure,fg=structure.fg}
+\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+
+\setbeamercolor*{framesubtitle}{fg=white}
+%------------------------------------- Beamer Settings ---------------------
+
+
+%------------------------------------- Befehle ---------------------
+\newcommand{\blueArrow}{{\color{midnightblue}$\pmb{\Rightarrow}$}\xspace}
+\newcommand{\bsp}[1]{\vfill\hfill\beamerbutton{#1}}
+\newcommand{\Alert}[1]{\alert{\textbf{#1}}\xspace}
+
+\newcommand{\columnsbegin}{\begin{columns}}
+\newcommand{\columnsend}{\end{columns}}
+\newcommand{\minipagebegin}{\begin{minipage}}
+\newcommand{\minipageend}{\end{minipage}}
+\newcommand{\centerbegin}{\begin{center}}
+\newcommand{\centerend}{\end{center}}
+
+\newsavebox{\mynotebox}
+\newcommand{\usemynotebox}{\usebox{\mynotebox}}
+\newenvironment{mynotes}[1][\textwidth]{\begin{lrbox}{\mynotebox}\begin{minipage}{#1}}{\end{minipage}\end{lrbox}\usemynotebox}
+\newcommand{\notesbegin}{\begin{mynotes}}
+\newcommand{\notesend}{\end{mynotes}}
+
+\newsavebox{\mycolorbox}
+\newenvironment{mycbox}{\begin{lrbox}{\mycolorbox}}{\end{lrbox}\begin{center}\fcolorbox{blue}{listinggray}{\usebox{\mycolorbox}}\end{center}}
+\newcommand{\cboxbegin}{\begin{mycbox}}
+\newcommand{\cboxend}{\end{mycbox}}
+
+\renewcommand{\usemynotebox}{}  % keine Notes in Beamer (nur Handout)
+%------------------------------------- Befehle ---------------------
+
+
+%------------------------------------- Listings ---------------------
+%% Einstellungen fuer alle Listings (Package-Import in Template)
+\lstset{basicstyle=\small\ttfamily\mdseries, xleftmargin=\bigskipamount, keywordstyle=\bfseries\color{dkblue}, identifierstyle=\ttfamily, commentstyle=\bfseries\color{gray}\textsl, stringstyle=\color{magenta}\upshape, emphstyle=\color{red}, emphstyle={[2]\color{blue}}, texcl=false, showspaces=false, showstringspaces=false, numbers=left, numberstyle=\footnotesize, breaklines=true, tabsize=4, backgroundcolor=\color{listinggray}, frame=shadowbox}
+
+%% Latex-Keywords
+%\lstset{morekeywords={subtitle, institute, logo, titlegraphic, subject, keywords, author, document, subfigure, chapter, section, subsection,subsubsection, paragraph, tiny, small, itemize, description, enumerate, lsubset, boolean, setboolean, ifthen, lengthtest, equal, IfFileExists, InputIfFileExists, AtBeginDocument, AtEndDocument, DefinesOption, ProcessOptions, ExecuteOption, ProvidesPackage, RequirePackage, align, center, minipage, includegraphics, maketitle, tableofcontents, equation, cases}}
+
+%% Scala-Keywords: Scala wird von Listings nicht unterstützt?!
+\lstset{morekeywords={class, object, trait, extends, override, new, def, val, var, for, yield, if, else, require, with, match, case}}
+
+%% Ruby/IO-Keywords
+%\lstset{morekeywords={print,Object,clone,slotNames,type,method,proto,getSlot,block,super,resend,OperatorTable,addOperator,call,sender,target,message,doMessage,forward}}
+
+%% Java-Keywords
+%\lstset{morekeywords={project,target,echo,property,javac,delete,copy,fileset,dirset,include,exclude,classpath,pathelement,junit,test,batchtest,formatter,junitreport,report}}
+
+
+%% Code-Befehl (Code im Text: lieber grün und fett als texttt und klein)
+%% => DEPRECATED!
+\newcommand{\code}[1]{\textcolor{dkgreen}{\texttt{\textbf{#1}}}\xspace}
+%------------------------------------- Listings ---------------------

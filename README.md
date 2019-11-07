@@ -13,7 +13,9 @@ Durch den Wechsel auf Markdown und die Konvertierung mit Pandoc eröffnen sich v
 Erzeugen von Handouts neue Möglichkeiten, beispielsweise kann man diese im HTML- oder sogar
 EPUB-Format erzeugen. Nebenbei spart man sich gerade beim Erstellen von Folien den deutlichen
 TeX-Overhead (beim Schreiben; die Generierung der Folien erfolgt mit Pandoc und LaTeX als Backend
-plus der Beamerklasse). Dies wurde im Workshop anschaulich an verschiedenen Beispielen demonstriert.
+plus der Beamerklasse) -- vergleiche [tutorial/example.md](tutorial/example.md) und
+[tutorial/example.tex](tutorial/example.tex). Dies wurde im Workshop anschaulich am Beispiel
+demonstriert.
 
 Da der Wechsel von TeX auf Markdown fließend stattfand, wurden einige im Laufe der Zeit lieb
 gewonnene selbstdefinierte TeX-Befehle und -Formatierungen übernommen. Für das Generieren von
@@ -25,7 +27,7 @@ eingesetzt.
 *Nachtrag 2019*: Mittlerweile ist in Pandoc ein Lua-Interpreter eingebaut und die oben beschriebenen
 Filter wurden weiterentwickelt und auf Lua umgestellt. Aus der Sammlung der Definitionen, Templates
 und Filter ist das Repository [github.com/cagix/pandoc-lecture](https://github.com/cagix/pandoc-lecture)
-entstanden.
+entstanden. Das Python-Filter-Skript für das damalige Tutorial wurde nachträglich auf Lua umgestellt.
 
 
 ## Unterlagen

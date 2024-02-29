@@ -1,0 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Discover the Zen of Presenting - Vorlesungsunterlagen
+  (inkl. E-Books) mit Pandoc und LaTeX erstellen
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Carsten
+    family-names: Gips
+    email: cagix@hsbi.de
+    affiliation: HSBI
+    orcid: 'https://orcid.org/0000-0002-4230-9060'
+repository-code: 'https://github.com/cagix/elk15_discoverthezenofpresenting'
+abstract: >-
+  Workshop zur Lernen in der digitalen Welt -
+  E-Learning-Konferenz, FH Bielefeld, 08.09.2015
+license: CC-BY-SA-4.0
